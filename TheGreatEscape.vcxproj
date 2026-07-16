@@ -141,10 +141,13 @@
   <ItemGroup>
     <ClCompile Include="TextUtils.cpp" />
     <ClCompile Include="TheGreatEscape.cpp" />
+    <ClCompile Include="UIUtils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ExitGame.h" />
     <ClInclude Include="TextUtils.h" />
     <ClInclude Include="TheGreatEscape.h" />
+    <ClInclude Include="UIUtils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,14 +1,25 @@
 #include "TheGreatEscape.h"
-#include "TextUtils.h"
+#include "ExitGame.h"
+#include "UIUtils.h"
 
 #include <iostream>
 
 int main()
 {
-	TextUtils::set_style(TextUtils::TEXT_RED);
-	std::cout << "Hello World!" << std::endl;
-	TextUtils::set_style({ TextUtils::UNDERLINE });
-	std::cout << "Hello World! (Important)" << std::endl;
-	TextUtils::clear_style();
-	std::cout << "Hello World! (Boring)" << std::endl;
+	try
+	{
+		std::string input = UIUtils::get_input("Continue? y/n", { "y", "n" });
+		UIUtils::print_line("Input received: " + input);
+	}
+	catch (const ExitGame& e)
+	{
+		std::cout << std::endl << "Game Closed." << std::endl;
+		return e.exit_code;
+	}
+	catch (const std::exception& e)
+	{
+		std::cerr << std::endl << "Unexpected error: " << e.what() << std::endl;
+		return 1;
+	}
+	return 0;
 }

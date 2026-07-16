@@ -27,6 +27,9 @@
     <ClCompile Include="TextUtils.cpp">
       <Filter>Source Files\Utils</Filter>
     </ClCompile>
+    <ClCompile Include="UIUtils.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TextUtils.h">
@@ -34,6 +37,12 @@
     </ClInclude>
     <ClInclude Include="TheGreatEscape.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UIUtils.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="ExitGame.h">
+      <Filter>Header Files\Utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
